@@ -149,6 +149,7 @@ public class RestXmlSchemaValidator extends AbstractRestSchemaValidator
     {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         setFeatures(factory);
+        factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
         factory.setNamespaceAware(true);
         try
         {
